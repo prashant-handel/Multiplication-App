@@ -14,12 +14,14 @@ scoreEl.innerHTML = `score: ${score}`;
 const questionEl = document.getElementById("question");
 questionEl.innerHTML = `What is ${num1} multiply by ${num2}?`;
 
-const fromEl = document.getElementById("form");
+const formEl = document.getElementById("form");
 const inputEl = document.getElementById("input");
+
+const resetEl = document.getElementById("reset");
 
 const correctAns = num1 * num2;
 
-fromEl.addEventListener("submit", () => {
+formEl.addEventListener("submit", () => {
   const userAns = +inputEl.value;
 
   if (userAns == correctAns) {
@@ -34,3 +36,12 @@ fromEl.addEventListener("submit", () => {
 function updateLocalStorage() {
   localStorage.setItem("score", JSON.stringify(score));
 }
+
+resetEl.addEventListener("click", () => {
+  function resetScore() {
+    scoreEl.innerText = `score: 0`;
+    score = 0;
+    updateLocalStorage.setItem("score", JSON.stringify(0));
+  }
+  resetScore();
+});
