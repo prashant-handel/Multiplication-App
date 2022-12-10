@@ -5,14 +5,17 @@ body {
   height: 100vh;
   align-items: center;
   text-align: center;
-  background-color: yellow;
+  background-color: slategray;
   font-family: cursive;
+}
+html{
+  overflow: hidden;
 }
 
 .form {
   background-color: white;
   padding: 200px;
-  box-shadow: 4px 4px 15px rgba(218, 46, 46, 0.767);
+  box-shadow: 4px 4px 15px rgba(218, 215, 46, 0.377);
   border-radius: 20px;
   margin: 5px;
 }
@@ -76,4 +79,45 @@ body {
   filter: brightness(0.9);
   cursor: pointer;
   color: blue;
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    scale: 25%;
+    /* width: 100vw; */
+  }
+  .form {
+    scale: 300%;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .score {
+    margin-right: 50px;
+  }
+  .input {
+    width: 50%;
+    justify-self: center;
+  }
+
+  /* #question{
+    font-size: large;
+    margin: 0;
+    padding: 0;
+  }
+  .input {
+    font-size: 10px;
+  } 
+   
+  .submit {
+    font-size: 10px;
+  }
+  
+  .reset{
+    font-size: 10px;
+  } */
 }
